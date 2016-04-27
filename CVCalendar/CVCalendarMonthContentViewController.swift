@@ -90,6 +90,7 @@ public final class CVCalendarMonthContentViewController: CVCalendarContentViewCo
                 monthViews[previous]?.removeFromSuperview()
                 replaceMonthView(presentedMonth, withIdentifier: previous, animatable: false)
                 replaceMonthView(followingMonth, withIdentifier: presented, animatable: true)
+                self.presentedMonthView = followingMonth// Modified by yangfan
 
                 insertMonthView(getFollowingMonth(followingMonth.date),
                                 withIdentifier: following)
@@ -106,6 +107,7 @@ public final class CVCalendarMonthContentViewController: CVCalendarContentViewCo
                 monthViews[following]?.removeFromSuperview()
                 replaceMonthView(previous, withIdentifier: self.presented, animatable: true)
                 replaceMonthView(presented, withIdentifier: following, animatable: false)
+                self.presentedMonthView = previous// Modified by yangfan
 
                 insertMonthView(getPreviousMonth(previous.date), withIdentifier: self.previous)
                 self.calendarView.delegate?.didShowPreviousMonthView?(previous.date)

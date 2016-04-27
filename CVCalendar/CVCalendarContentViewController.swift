@@ -75,6 +75,8 @@ extension CVCalendarContentViewController {
 //MARK: - Month Refresh
 
 extension CVCalendarContentViewController {
+    // Modified by yangfan
+    
     public func refreshPresentedMonth() {
         for weekV in presentedMonthView.weekViews {
             for dayView in weekV.dayViews {

@@ -249,7 +249,8 @@ extension CVCalendarDayView {
             dotMarker?.removeFromSuperview()
             dotMarkers[index] = nil
         }
-
+        
+        
         if let delegate = calendarView.delegate {
             if let shouldShow = delegate.dotMarker?(shouldShowOnDayView: self) where shouldShow {
 
