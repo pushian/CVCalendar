@@ -374,6 +374,9 @@ extension CVCalendarDayView {
                 } else {
                     colorMarker()
                 }
+                
+                // Modified by yangfan
+                bringSubviewToFront(dotMarker)
             }
         }
     }

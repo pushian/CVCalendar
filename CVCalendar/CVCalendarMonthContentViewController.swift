@@ -181,6 +181,8 @@ public final class CVCalendarMonthContentViewController: CVCalendarContentViewCo
                 for monthView in self.monthViews.values {
                     self.prepareTopMarkersOnMonthView(monthView, hidden: false)
                 }
+                // Modified by yangfan
+                self.calendarView.delegate?.didShowPreviousMonthView?(previous.date)
             }
         }
     }
@@ -218,6 +220,9 @@ public final class CVCalendarMonthContentViewController: CVCalendarContentViewCo
                 for monthView in self.monthViews.values {
                     self.prepareTopMarkersOnMonthView(monthView, hidden: false)
                 }
+                
+                // Modified by yangfan
+                self.calendarView.delegate?.didShowNextMonthView?(following.date)
             }
         }
 
